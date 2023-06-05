@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <section class="weather">
+      <div class="container">
+        <div class="searchBar">
+          <input id="search" type="search" placeholder="Enter location" />
+          <div class="searchcon">
+            <button>
+              <img id="searcBtn" src="/assets/images/search.svg" alt="search" />
+            </button>
+          </div>
+        </div>
+        <div class="alertBox">
+          <p id="alert">*please enter valid city name</p>
+        </div>
+        <div class="img">
+          <img id="image" src="/assets/images/cloud.png" alt="cloud" />
+          <p id="cloud"></p>
+        </div>
+        <p id="location"></p>
+        <p id="temp">Temperature:</p>
+        <p id="minTemp">Min-Temperature:</p>
+        <p id="maxTemp">Max-Temperature:</p>
+        <p id="humidity">Humidity:</p>
+        <p id="speed">Wind speed:</p>
+      </div>
+    </section>
+    <script src="/assets/js/index.js">
+            navigator.geolocation.getCurrentPosition((position) => {
+        console.log(position)
+      })
+    </script>
+  </body>
+</html>
